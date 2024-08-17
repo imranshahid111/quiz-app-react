@@ -7,10 +7,12 @@ export default function Quiz() {
   const [que, setQue] = useState(0);
   const [bg, setBg] = useState(false);
   const [index, setIndex] = useState(null);
+  const [selected, setSelected] = useState('');
   const [ans, setAns] = useState(null);
   const [quizCompleted, setQuizCompleted] = useState(false);
 
-  const checkindex = (i) => {
+  const checkindex = (i, option) => {
+    setSelected(option)
     setIndex(i);
   };
 
@@ -64,9 +66,9 @@ export default function Quiz() {
         <div className='w-[90%] m-auto'>
           {Questions[que].answer.map((v, i) => (
             <button
-              onClick={() => checkindex(i)}
+              onClick={() => checkindex(i, v.text)}
               key={i}
-              className={`${i === ans ? "bg-green-600" : "bg-white"
+              className={`${i === ans ? "bg-green-600" : selected == v.text? 'bg-blue-700':  "bg-white"
                 } text-gray-900 border border-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 w-full`}
             >
               {v.text}
