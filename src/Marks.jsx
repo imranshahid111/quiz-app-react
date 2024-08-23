@@ -13,12 +13,12 @@ export default function Marks({mark}) {
       
        
         <div className='w-[90%] m-auto '>
-        <h1 className='text-center pt-40 text-7xl'>Your Marks : {mark}</h1>
+        <h1 className='text-center pt-40 text-3xl md:text-7xl'>Your Marks : {mark}</h1>
 
         </div>
         <button
           onClick={load}
-          className='text-gray-900 w-28 m-40 ml-[45%] bg-[#FF9051] border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2'
+          className='text-gray-900 w-28 m-40 ml-[34%] md:ml-[45%] bg-[#FF9051] border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2'
         >
         Play Again
         </button>

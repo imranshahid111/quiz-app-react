@@ -58,7 +58,7 @@ export default function Quiz() {
 
   return (
     <div className='bg-[#A46CE5] h-screen'>
-      <div className='flex justify-center pt-5'></div>
+      <div className='flex justify-center pt-9 md:pt-5'></div>
       <div className='m-auto bg-white w-[80%] h-[500px] md:h-5/6 rounded-3xl pt-3'>
         <h1 className='text-center font-semibold text-3xl'>Quiz</h1>
         <h1 className='text-right pr-9 font-semibold text-lg'>Marks: {marks}</h1>
