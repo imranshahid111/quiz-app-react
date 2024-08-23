@@ -59,10 +59,10 @@ export default function Quiz() {
   return (
     <div className='bg-[#A46CE5] h-screen'>
       <div className='flex justify-center pt-5'></div>
-      <div className='m-auto bg-white w-[80%] h-5/6 rounded-3xl pt-3'>
+      <div className='m-auto bg-white w-[80%] h-[500px] md:h-5/6 rounded-3xl pt-3'>
         <h1 className='text-center font-semibold text-3xl'>Quiz</h1>
         <h1 className='text-right pr-9 font-semibold text-lg'>Marks: {marks}</h1>
-        <h1 className='p-10 font-semibold text-2xl'>{Questions[que].question}</h1>
+        <h1 className='p-10 font-semibold text-xl md:text-2xl'>{Questions[que].question}</h1>
         <div className='w-[90%] m-auto'>
           {Questions[que].answer.map((v, i) => (
             <button
@@ -77,13 +77,13 @@ export default function Quiz() {
         </div>
         <button
           onClick={check}
-          className='text-gray-900 mx-[40%] mt-20 w-28 bg-[#FF9051] border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2'
+          className=' mx-16 mt-7 text-gray-900 md:mx-[40%] md:mt-20 w-20 md:w-28 bg-[#FF9051] border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2'
         >
           Hint
         </button>
         <button
           onClick={clk}
-          className='text-gray-900 w-28 bg-[#FF9051] border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2'
+          className='text-gray-900 w-20 md:w-28 bg-[#FF9051] border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2'
         >
           Next
         </button>
